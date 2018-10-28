@@ -1,14 +1,14 @@
 function make() {
   let sum = 0;
 
-  let fn = function fn() {
+  let common = function common() {
     for (let i = 0; i < arguments.length; i++) {
       sum += parseInt(arguments[i]);
     }
-    return fn;
+    return common;
   };
 
-  fn.toString = function () {
+  common.toString = function () {
     return sum;
   }
 
@@ -16,5 +16,5 @@ function make() {
     sum += parseInt(arguments[i]);
   }
 
-  return fn;
+  return common;
 };
